@@ -1,0 +1,22 @@
+<html>
+
+  <head>
+    <title>The Gossip Project</title>
+  </head>
+
+  <body>
+    <h1>Bienvenue dans The Gossip Project, une application web développée via Sinatra</h1>
+
+    <% gossips.each_with_index do |gossip, index| %> <!-- <% %> sert à exécuter du Ruby au sein d'un fichier HTML -->
+      <p>
+        <%= gossip.author %><br/> <!-- <%= %> sert à afficher un string Ruby qui est entre ces balises (c'est l'équivalent d'un puts mais sur du HTML). -->
+        <%= gossip.content %><br/>
+        <a href="/gossips/<%=index%>/">Voir tous les gossips</a>
+      </p>
+    <% end %>
+
+    <a href="/gossips/new/">Créer un gossip</a>
+
+  </body>
+
+</html>

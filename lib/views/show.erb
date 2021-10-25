@@ -1,0 +1,18 @@
+<!-- Faire des pages "profil" pour chaque potin, c’est-à-dire que nous allons créer une page par potin afin de l'afficher lui seul. C'est ce qu'on appelle un page "show". 
+Quand "index" est une page unique qui affiche tous les potins, il existe autant de page "show" que de potin. -->
+
+<html>
+
+  <head>
+    <title>The Gossip Project</title>
+  </head>
+
+  <body>
+    <h1>PAGE POTIN</h1>
+      Voici la page du potin n°<%= params["id"] %><br/>
+      Son auteur : == <%= gossip.author %> ==<br/>
+      Le contenu du potin : == <%= gossip.content %> ==<br/><br/>
+      <a href="/">Revenir à la page des potins</a>
+  </body>
+
+</html>

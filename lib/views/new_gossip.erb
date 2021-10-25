@@ -1,0 +1,14 @@
+<html>
+  <head>
+    <title>Créer un gossip</title>
+  </head>
+  <body>
+    <h1>Crée un gossip !</h1>
+    <p>Balance ton gossip via le formulaire ci-dessous</p>
+    <form action='/gossips/new/' method='POST'> <!-- Le champ action définit l'URL qui va recevoir le contenu du formulaire et le champ method définit le type de requête -->
+      Saisi ici ton nom :  <input type='text' name='gossip_author'/><br/> <!-- champ de saisie de texte à remplir par l'utilisateur et définir le nom que portera ce contenu saisi, tout comme on lui donnerait un nom de variable en Ruby du genre "user_name" ou autre -->
+      Balance ton gossip : <input type='text' name='gossip_content'/><br/>
+      <input type='submit'/> <!-- En cliquant dessus, l'utilisateur va déclencher l'envoi de la requête POST avec toutes les informations des champs du formulaire. -->
+    </form>
+  </body>
+</html>
