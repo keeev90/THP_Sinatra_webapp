@@ -23,7 +23,7 @@ class Gossip #Model
 
   def self.find(id) # Méthode à appliquer sur la classe Gossip pour récupérer dans notre BDD le potin N°x et qui ressort le gossip correspondant. 
     all_gossips = Gossip.all
-    return all_gossips[id.to_i]
+    return all_gossips[id]
   end
 
 end

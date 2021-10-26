@@ -20,7 +20,7 @@ class ApplicationController < Sinatra::Base #hérite (<) de la classe Sinatra::B
   # WARNING : le contenu de params ne persiste que d’une page sur l’autre. Le hash se vide à chaque requête HTTP (changement de page). Il faut donc récupérer le contenu immédiatement après la saisie, sinon c'est perdu !
 
   get '/gossips/:id/' do #route dynamique avec une variable d'URL ":id" >>> à chaque fois qu'un utilisateur rentre une URL du type http://localhost:4567/gossips/x/, Sinatra comprend que l'on veut voir la page show du potin N°x en BDD
-    erb :show, locals: {gossip: Gossip.find(params["id"])} #passer la variable à utiliser dans une view (avec du code Ruby directement dans la view Show), en l'occurence l'id du gossip que l'utilisateur souhaite afficher (= l'id est ici un paramètre indiqué par l'utilisateur)
+    erb :show, locals: {gossip: Gossip.find(params["id"].to_i)} #passer la variable à utiliser dans une view (avec du code Ruby directement dans la view Show), en l'occurence l'id du gossip que l'utilisateur souhaite afficher (= l'id est ici un paramètre indiqué par l'utilisateur)
   end
 
 end

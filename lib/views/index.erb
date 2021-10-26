@@ -9,13 +9,11 @@
 
     <% gossips.each_with_index do |gossip, index| %> <!-- <% %> sert à exécuter du Ruby au sein d'un fichier HTML -->
       <p>
-        <%= gossip.author %><br/> <!-- <%= %> sert à afficher un string Ruby qui est entre ces balises (c'est l'équivalent d'un puts mais sur du HTML). -->
-        <%= gossip.content %><br/>
-        <a href="/gossips/<%=index%>/">Voir tous les gossips</a>
+        <a href="/gossips/<%=index%>/">Voir le gossip n°<%=index%></a>
       </p>
     <% end %>
-
-    <a href="/gossips/new/">Créer un gossip</a>
+    <br/>
+    <a href="/gossips/new/">+ Créer un gossip</a>
 
   </body>
 

@@ -10,8 +10,8 @@ Quand "index" est une page unique qui affiche tous les potins, il existe autant 
   <body>
     <h1>PAGE POTIN</h1>
       Voici la page du potin n°<%= params["id"] %><br/>
-      Son auteur : == <%= gossip.author %> ==<br/>
-      Le contenu du potin : == <%= gossip.content %> ==<br/><br/>
+      Son auteur : == <%= gossip.author %> ==<br/> <!-- Autre solution moins directe : array_gossip[id].author en passant la variable array_gossip[id] de la classe Gossip à la view : array_gossip: Gossip.all et id:params['id'].to_i-->
+      Le contenu du potin : == <%= gossip.content %> ==<br/><br/> <!-- <%= %> sert à afficher un string Ruby qui est entre ces balises (c'est l'équivalent d'un puts mais sur du HTML). -->
       <a href="/">Revenir à la page des potins</a>
   </body>
 
